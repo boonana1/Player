@@ -7,7 +7,6 @@ export const videoPlayerInit = () => {
   const videoTimeTotal = document.querySelector('.video-time__total');
   const videoFullscreen = document.querySelector('.video-fullscreen');
   const videoVolume = document.querySelector('.video-volume');
-  videoVolume.value = 100;
 
   const toggleIcon = () => {
     if (videoPlayer.paused) {
