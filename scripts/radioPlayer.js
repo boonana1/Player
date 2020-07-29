@@ -5,6 +5,8 @@ export const radioPlayerInit = () => {
   const radioHeaderBig = document.querySelector('.radio-header__big');
   const radioItem = document.querySelectorAll('.radio-item');
   const radioStop = document.querySelector('.radio-stop');
+  const radioVolume = document.querySelector('.radio-volume');
+  radioVolume.value = 100;
 
   const audio = new Audio();
   audio.type = 'audio/aac';
@@ -55,5 +57,9 @@ export const radioPlayerInit = () => {
       audio.pause();
     }
     changeIconPlay();
+  });
+
+  radioVolume.addEventListener('input', () => {
+    audio.volume = radioVolume.value / 100;
   });
 };
