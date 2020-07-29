@@ -61,4 +61,7 @@ export const radioPlayerInit = () => {
   radioVolume.addEventListener('input', () => {
     audio.volume = radioVolume.value / 100;
   });
+
+  audio.volume = 0.5;
+  radioVolume.value = audio.volume * 100;
 };
