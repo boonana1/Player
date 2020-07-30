@@ -7,7 +7,7 @@ const playerBlock = document.querySelectorAll('.player-block');
 const temp = document.querySelector('.temp');
 
 const deactivationPlayer = () => {
-  temp.getElementsByClassName.display = 'none';
+  temp.style.display = 'none';
   playerBlock.forEach((item) => {
     item.classList.remove('active');
   });
