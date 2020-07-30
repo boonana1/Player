@@ -106,3 +106,13 @@ export const musicPlayerInit = () => {
     audioPlayer.currentTime = progress;
   });
 };
+
+export const musicPause = () => {
+  const audio = document.querySelector('.audio');
+  const audioButtonPlay = document.querySelector('.audio-button__play');
+  const audioPlayer = document.querySelector('.audio-player');
+  audioPlayer.pause();
+  audio.classList.remove('play');
+  audioButtonPlay.classList.add('fa-play');
+  audioButtonPlay.classList.remove('fa-pause');
+};

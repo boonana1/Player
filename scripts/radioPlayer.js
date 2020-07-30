@@ -65,3 +65,18 @@ export const radioPlayerInit = () => {
   audio.volume = 0.5;
   radioVolume.value = audio.volume * 100;
 };
+
+export const radioPause = () => {
+  const radio = document.querySelector('.radio');
+  const radioStop = document.querySelector('.radio-stop');
+  audio.pause();
+  if (audio.paused) {
+    radio.classList.remove('play');
+    radioStop.classList.add('fa-play');
+    radioStop.classList.remove('fa-stop');
+  } else {
+    radio.classList.add('play');
+    radioStop.classList.remove('fa-play');
+    radioStop.classList.add('fa-stop');
+  }
+};

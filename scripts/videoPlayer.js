@@ -75,3 +75,8 @@ export const videoPlayerInit = () => {
   videoPlayer.volume = 0.5;
   videoVolume.value = videoPlayer.volume * 100;
 };
+
+export const videoPause = () => {
+  const videoPlayer = document.querySelector('.video-player');
+  videoPlayer.pause();
+};
